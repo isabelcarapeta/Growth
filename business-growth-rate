@@ -1,0 +1,23 @@
+def calculate_growth_rate(initial_value, final_value):
+    """
+    Calculate the growth rate given an initial and final value.
+
+    Args:
+        initial_value (float): The initial value.
+        final_value (float): The final value.
+
+    Returns:
+        float: The growth rate as a percentage.
+    """
+    if initial_value == 0:
+        raise ValueError("Initial value cannot be zero.")
+    
+    growth_rate = ((final_value - initial_value) / initial_value) * 100
+    return growth_rate
+
+# Example usage:
+initial_value = 100000  # Example initial revenue
+final_value = 150000    # Example final revenue
+
+growth_rate = calculate_growth_rate(initial_value, final_value)
+print(f"The growth rate is {growth_rate:.2f}%")
